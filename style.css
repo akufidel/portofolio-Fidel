@@ -230,3 +230,33 @@ body {
     border-top: 3px solid var(--subterranean);
     border-bottom: 3px solid var(--subterranean);
 }
+
+/* Pengaturan Responsif untuk HP / Layar Kecil */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-box {
+        width: 90%;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    /* Mengubah kotak pengalaman menjadi 1 kolom ke bawah di HP */
+    .exp-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}
