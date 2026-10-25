@@ -1,0 +1,232 @@
+/* Import Google Fonts (Playfair Display untuk judul, Plus Jakarta Sans untuk teks) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+/* Palet Warna Baru */
+:root {
+    --chaos-black: #0D110F;
+    --oceanic-noir: #172B35;
+    --subterranean: #1C3A51;
+    --theatre-blue: #204A7A;
+    --mega-blue: #3569A3;
+    --text-light: #E8FDFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--chaos-black);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(13, 17, 15, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 1.2rem 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(53, 105, 163, 0.3);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--text-light);
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--mega-blue);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(13, 17, 15, 0.65), rgba(23, 43, 53, 0.8)), url('img/iniheaderfidel.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    text-align: center;
+    padding-bottom: 5rem;
+    border-bottom: 3px solid var(--subterranean);
+}
+
+.hero-content {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-box {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--mega-blue);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0.4rem;
+    color: #E8FDFF !important;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Playfair Display', serif;
+}
+
+.tagline {
+    font-size: 1.05rem;
+    color: #89A6B8 !important;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Section Umum */
+.section {
+    padding: 4rem 10%;
+    background-color: var(--chaos-black);
+}
+
+.alt-section {
+    background-color: var(--oceanic-noir);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--mega-blue);
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Kotak Konten (Sudut tumpul 16px) */
+.card-box {
+    background: var(--oceanic-noir);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    border: 1px solid var(--subterranean);
+}
+
+/* List Pendidikan */
+.edu-list {
+    list-style-type: none;
+}
+
+.edu-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--subterranean);
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.edu-list li:last-child {
+    border-bottom: none;
+}
+
+/* Grid Pengalaman & Prestasi */
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.exp-box {
+    background: var(--oceanic-noir);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border-left: 4px solid var(--mega-blue);
+    border: 1px solid var(--subterranean);
+}
+
+.year {
+    font-size: 0.85rem;
+    color: var(--mega-blue);
+    font-weight: bold;
+}
+
+.exp-box h3 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--oceanic-noir);
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--subterranean);
+    font-family: 'Playfair Display', serif;
+}
+
+.footer h2 {
+    color: var(--mega-blue);
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    color: var(--mega-blue);
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.copyright {
+    color: #839bb0;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Background khusus untuk bagian Pengalaman */
+#experience {
+    background: linear-gradient(rgba(13, 17, 15, 0.85), rgba(13, 17, 15, 0.85)), url('img/kriwil.jpg');
+    background-size: cover;
+    background-position: center;
+    border-top: 3px solid var(--subterranean);
+    border-bottom: 3px solid var(--subterranean);
+}
